@@ -4,35 +4,60 @@
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width" >
     <title>Meu site</title>
-	<link href="styles/style.css" rel="stylesheet" >
+	<link href="styles/stylemain.css" rel="stylesheet" >
 	<link
 		href="https://fonts.googleapis.com/css?family=Open+Sans"
 		rel="stylesheet" >
-
   </head>
+  
+  <h1>Otimização de GPU's</h1>
+  
   <body>
-    <h1>Overclock: como funciona e experiências pessoais</h1>
-	<p style="text-indent:50px">Overclock sempre foi um tópico fascinante para mim. A ideia de conseguir extrair mais performance de um componente que você já possui de forma gratuita é extremamente atraente, porém existem riscos envolvidos e é necessário ter responsabilidade para evitar danificar tais componentes.</p>
-	<p style="text-indent:50px">Em resumo, overclock se baseia em aumentar a frequência de operação de um dispositivo eletrônico, mais comumente processadores, placas de vídeo, memória RAM e até monitores. Vamos focar essencialmente em placas de vídeo, pois elas são relativamente simples de manusear em tempo real.
-	<p style="text-indent:50px">Inicialmente vamos esclarecer alguns termos:</p>
-	<ul>
-	<li>Clock do núcleo - a frequência que os shaders rodam, em megahertz <i>(também chamados de CUDA cores pela Nvidia e stream processors pela AMD)</i></li>
-	<li>Clock da memória - a frequência que a memória de vídeo roda, em megahertz</li>
-	<li>Limite de potência - a quantidade máxima de energia, em watts, que a placa pode consumir; é essencial para assegurar que a placa não superaqueça ou coloque muito estresse nos reguladores de voltagem</li>
-	<li>Throttling - redução do clock do núcleo caso a placa atinja um dos seus limites, seja de potência, corrente ou temperatura</li>
-	</ul>
-	<p style="text-indent:50px">Existem diversas ferramentas de overclock, sendo a maioria delas gratuita. As mais utilizadas são o MSI Afterburner e o AMD Wattman (que não é mais chamado disso, mas será aqui por conveniência). O processo se resume a aumentar os clocks gradativamente e caso aconteça um crash, aumente a voltagem (caso possível) ou diminua os mesmos.</p>
-	<img style="display: block;margin-left: auto;margin-right: auto;" src="img/wattman.png" alt="AMD Wattman" height=600 >
-	<p style="text-indent:50px">Pode-se dizer que há três fatores que governam o potencial de overclock da sua placa: capacidade de refrigeração, qualidade ou "binning" do chip e o seu próprio bom senso. Caso a sua placa tenha um dissipador pequeno (a parte de metal que absorve o calor do chip) ou apenas uma ventoinha, é natural inferir que ela não terá a mesma capacidade de se resfriar se comparada a uma placa com um dissipador maior e mais ventoinhas; por isso versões mais "premium" de uma mesma placa são vendidas por parceiras das fabricantes, as AIB's. O segundo fator é a qualidade do próprio chip: devido a diferenças e tolerâncias na fabricação dos wafers, alguns chips terão microdefeitos que atrapalham no seu funcionamento e geralmente requerem voltagens maiores para operar num determinado clock.</p>
-	<img style="display: block;margin-left: auto;margin-right: auto;" src="img/rx580.png" alt="Sapphire RX 580 Nitro+ Special Edition" height=400 >
-	<p style="text-indent:50px">O terceiro fator se resume a reconhecer os riscos envolvidos no processo. É bem possível que você consiga um overclock interessante sem tocar na voltagem da sua placa, porém é tentador aumentá-la para conseguir ainda mais performance. O problema é o fato de que quanto maior é a voltagem utilizada, maior estresse é colocado no chip e nos módulos reguladores de voltagem (VRM's), e esses componentes podem não tolerar aumentos significativos. Em geral, é perfeitamente seguro fazer overclock em qualquer componente caso a voltagem permaneça nos valores padrões e o power limit não seja estendido.</p>
-	<img style="display: block;margin-left: auto;margin-right: auto;" src="img/stats.png" alt="Estatísticas de performance do Wattman" height=500 >
-	<p style="text-indent:50px">Pessoalmente, eu já tive três placas de vídeo: uma GTX 750 Ti, uma RX 580 e uma RX 5700 XT. A primeira, que era um modelo single fan da Zotac, era capaz de um aumento impressionante de 200 MHz no núcleo e 650 MHz na memória; eu cheguei até a modificar a bios dela para aumentar o power limit de 38.5 W para 65 W. A segunda, que é o modelo azul da imagem acima, já veio de fábrica com clocks muito altos e não possuía muito espaço sobrando para overclock, mas mesmo assim consegui rodá-la com +55 MHz no núcleo e +150 na memória, e também era possível reduzir um pouco a latência da mesma. Não tive muito tempo para experimentar com a terceira placa, mas ela consegue rodar com pelo menos mais 50 MHz no núcleo e +50 na memória.</p>
-	<img style="display: block;margin-left: auto;margin-right: auto;" src="img/rx5700xt.png" alt="MSI RX 5700 XT Gaming X" height=350 >
-	<p style="text-indent:50px">Você deve ter notado um padrão: ignorando os três valores das memórias, que não são diretamente equivalentes, não foi possível aumentar tanto a frequência do núcleo, por que? Atualmente, não só as placas de vídeo, mas processadores também, são projetados para atingir a maior frequência possível caso o usuário consiga fornecer refrigeramento suficiente, realizando basicamente "overclocks automáticos". Tal fator é responsável pela gradativa diminuição da popularidade do overclocking, além de maior preocupação em volta do consumo de energia e geração de calor por parte dos componentes.</p>
-	<p style="text-indent:50px">É inegável que o processo de overclock seja divertido e encontrar os limites de um componente e extrair o máximo de performance possível é tentador, mas isso não é (e talvez possa-se dizer que nunca foi) necessário. O que está na moda hoje em dia é fazer undervolt, ou seja, reduzir a voltagem de algum componente para reduzir temperaturas e consumo de eletricidade e impedir ou reduzir o throttling de componentes, o que tem benefícios bem mais tangíveis e práticos. Eu sempre fui fã de fazer overclock, mas hoje em dia não vejo mais a justificativa em gerar mais 40 watts de calor que vão direto pro ambiente em troca de 5% ou menos de performance.</p>
-	<p style="text-indent:50px">Concluindo, overclock ainda vale a pena? Em alguns casos, sim, mas na maioria deles é bem mais sensível fazer undervolt; que também pode melhorar a performance e evitar throttling, o que exploraremos em detalhe num momento futuro.
+  <div class="button-grid">
+    <button id="mainbutton1" type="button" <styles>Escolhendo peças</button>
+	<script>
+		document.getElementById("mainbutton1").addEventListener("click", function() {
+			window.location.href = "software.html";
+		});
+		document.getElementById("mainbutton1").innerHTML = '<img src="img/gear.png" alt="Software">';
+	</script>
+    <button id="mainbutton2" type="button" <styles>Overclocking</button>
+	<script>
+		document.getElementById("mainbutton2").addEventListener("click", function() {
+			window.location.href = "overclock.html";
+		});
+		document.getElementById("mainbutton2").innerHTML = '<img src="img/speedometer.png" alt="OC & UV">';
+	</script>
+    <button id="mainbutton3" type="button" <styles>Refrigeração</button>
+	<script>
+		document.getElementById("mainbutton3").addEventListener("click", function() {
+			window.location.href = "cooling.html";
+		});
+		document.getElementById("mainbutton3").innerHTML = '<img src="img/snowflake.png" alt="Refrigeração">';
+	</script>
+    <button id="mainbutton4" type="button" <styles>Contato</button>
+	<script>
+		document.getElementById("mainbutton4").addEventListener("click", function() {
+			window.location.href = "email.html";
+		});
+		document.getElementById("mainbutton4").innerHTML = '<img src="img/mail.png" alt="Contato & Notificações">';
+	</script>
 	
-</p>
+    <style>
+      .button-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+      }
+      
+      .button-grid button {
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+      }
+    </style>
+  </div>
   </body>
 </html>

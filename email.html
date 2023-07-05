@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width" >
+    <title>Meu site</title>
+	<link href="styles/style.css" rel="stylesheet" >
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans"
+		rel="stylesheet" >
+  </head>
+  <title>Contato</title>
+</head>
+<body>
+  <h1>Contato</h1>
+  <form id="contactForm">
+	<p>Você tem algum conhecimento, sugestão ou correção para compartilhar? Fique à vontade para me enviar uma mensagem aqui!</p>
+    <label for="name">Nome:</label>
+	<br>
+    <input type="text" id="name" required style="width: 30%;"><br><br>
+    
+    <label for="message">Mensagem:</label>
+	<br>
+    <textarea id="message" rows="8" required style="width: 100%; resize: none"></textarea><br><br>
+    
+    <button style="width: 100px; height: 30px; border: none" type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var message = document.getElementById("message").value;
+
+      if (message !== "" && name !== "") {
+        alert("Sua mensagem foi enviada com sucesso.");
+      }
+    });
+  </script>
+  <br>
+  <h1>Notificações</h1>
+  <form id="subscribeForm">
+	<p>Deseja receber um email quando algo novo for postado?</p>
+    
+    <label for="email">Seu email:</label>
+    <input type="email" id="email" required style="width: 30%;"><br><br>
+    
+    <button style="width: 100px; height: 30px; border: none" type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      var email = document.getElementById("email").value;
+  
+      if (email !== "") {
+        alert("Obrigado! Você receberá um email quando algo novo for postado.");
+      }
+    });
+  </script>
+
+</body>
+</html>
